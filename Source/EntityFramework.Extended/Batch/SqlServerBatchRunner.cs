@@ -341,7 +341,7 @@ namespace EntityFramework.Batch
 
                             value = value.Replace(objectParameter.Name, parameterName);
                         }
-                        sqlBuilder.AppendFormat("j0.[{0}] = {1}", columnName, value);
+                        sqlBuilder.AppendFormat("[{0}] = j0.{1}", columnName, value);
                     }
                     wroteSet = true;
                 }
